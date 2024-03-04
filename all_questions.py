@@ -8,59 +8,54 @@ def question1():
     answers = {}
 
     # type: bool (True/False)
-    answers["(a)"] = -1
+    answers["(a)"] = True
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] ="Agglomerative hierarchical clustering handles outliers better than k-means because it forms clusters step by step, making it less affected by extreme values."
 
     # type: bool (True/False)
-    answers["(b)"] = -1
+    answers["(b)"] = True
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
+    answers["(b) explain"] = " K-means can give different results each time it's run because it starts with random points. In contrast, agglomerative hierarchical clustering always gives the same result for the same data because it follows a set process without randomness."
+    # type: bool (True/False)
+    answers["(c)"] = False
+
+    # type: explanatory string (at least four words)
+    answers["(c) explain"] = "K-means is generally faster and uses less memory than agglomerative hierarchical clustering because it involves simpler calculations and fewer steps. However, it's not the most efficient clustering algorithm in all scenarios since efficiency can depend on the specific characteristics of the dataset and the context in which clustering is applied."
+    # type: bool (True/False)
+    answers["(d)"] = False
+
+    # type: explanatory string (at least four words)
+    answers["(d) explain"] = "Splitting a cluster lowers the sum of squared errors because it creates two centers for the same group, leading to a shorter distance to the nearest centroids."
 
     # type: bool (True/False)
-    answers["(c)"] = -1
+    answers["(e)"] = True
 
     # type: explanatory string (at least four words)
-    answers["(c) explain"] = ""
+    answers["(e) explain"] = "In K-means clustering, a decrease in SSE (Sum of Squared Errors) means that data points are closer to their respective cluster centroids, indicating increased cohesion within clusters."
+    # type: bool (True/False)
+    answers["(f)"] = True
+
+    # type: explanatory string (at least four words)
+    answers["(f) explain"] = "In K-means clustering, an increase in SSB (Between Sum of Squares) indicates that clusters are further apart from each other, which means that the separation between clusters has increased."
+    # type: bool (True/False)
+    answers["(g)"] = False
+
+    # type: explanatory string (at least four words)
+    answers["(g) explain"] = "In k-means, making clusters tighter (cohesion) doesn't always mean they'll be further apart (separation)."
 
     # type: bool (True/False)
-    answers["(d)"] = -1
+    answers["(h)"] = True
 
     # type: explanatory string (at least four words)
-    answers["(d) explain"] = ""
-
+    answers["(h) explain"] = "In k-means, the total sum of squares (TSS) is the addition of SSE and SSB, and it stays the same throughout the clustering process."
+   
     # type: bool (True/False)
-    answers["(e)"] = -1
+    answers["(i)"] = True
 
     # type: explanatory string (at least four words)
-    answers["(e) explain"] = ""
-
-    # type: bool (True/False)
-    answers["(f)"] = -1
-
-    # type: explanatory string (at least four words)
-    answers["(f) explain"] = ""
-
-    # type: bool (True/False)
-    answers["(g)"] = -1
-
-    # type: explanatory string (at least four words)
-    answers["(g) explain"] = ""
-
-    # type: bool (True/False)
-    answers["(h)"] = -1
-
-    # type: explanatory string (at least four words)
-    answers["(h) explain"] = ""
-
-    # type: bool (True/False)
-    answers["(i)"] = -1
-
-    # type: explanatory string (at least four words)
-    answers["(i) explain"] = ""
-
+    answers["(i) explain"] = "Splitting a cluster into two lowers error by creating two closer centers, shortening distances."
     return answers
 
 
