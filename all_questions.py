@@ -66,22 +66,22 @@ def question2():
     answers = {}
 
     # type: bool (True/False)
-    answers["(a)"] = -1
+    answers["(a)"] = "True"
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] = "In the figure, the clusters are positioned too distant from the centroid to draw points from other areas."
 
     # type: bool (True/False)
-    answers["(b)"] = -1
+    answers["(b)"] = "False"
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
+    answers["(b) explain"] = "The figure shows that the shaded areas are near each other, meaning the clusters will include points from both shaded areas."
 
     # type: bool (True/False)
-    answers["(c)"] = -1
+    answers["(c)"] = "True"
 
     # type: explanatory string (at least four words)
-    answers["(c) explain"] = ""
+    answers["(c) explain"] = "The centroid at 12.5 is too distant from any points, leading to all other clusters being left without any points."
 
     return answers
 
@@ -93,13 +93,13 @@ def question3():
     answers = {}
 
     # type: a string that evaluates to a float
-    answers["(a) SSE"] = 7.5
+    answers["(a) SSE"] = "4 * R^2"
 
     # type: a string that evaluates to a float
-    answers["(b) SSE"] = 7.5
+    answers["(b) SSE"] = "4 * (a**2 + b**2 + c**2)"
 
     # type: a string that evaluates to a float
-    answers["(c) SSE"] = 7.5
+    answers["(c) SSE"] = "4*(R^2 + 0^2 + (R/2)^2)"
 
     return answers
 
@@ -111,28 +111,29 @@ def question4():
     answers = {}
 
     # type: int
-    answers["(a) Circle (a)"] = 0
+    answers["(a) Circle (a)"] = 1
 
     # type: int
-    answers["(a) Circle (b)"] = 0
+    answers["(a) Circle (b)"] = 1
 
     # type: int
-    answers["(a) Circle (c)"] = 0
+    answers["(a) Circle (c)"] = 1
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] = "All points in circle A will go to its centroid. Around one-third of circle B's points, specifically those on the left side, will belong to the left centroid in B. The rest of B's points and all points in C will be grouped with the centroid at B's center, causing the right centroid in B to shift to circle C due to C's larger number of points. In the following iteration, points in circles A, B, and C will align with their respective centroids, leading to convergence of the K-means algorithm."
 
     # type: int
-    answers["(b) Circle (a)"] = 0
+    answers["(b) Circle (a)"] = 1
 
     # type: int
-    answers["(b) Circle (b)"] = 0
+    answers["(b) Circle (b)"] = 1
 
     # type: int
-    answers["(b) Circle (c)"] = 0
+    answers["(b) Circle (c)"] = 1
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
+    answers["(b) explain"] = "
+Given that circles A and B are near each other and far from circle C, the points from A and B will cluster around the centroid in A. The points in C will be evenly divided among the two centroids there, with each getting 50,000 points. Since A and B have an equal number of points, the centroid in A will shift between them. The centroids in C will slightly separate but stay within C, each holding half of the points from C."
 
     # type: int
     answers["(c) Circle (a)"] = 0
@@ -141,10 +142,10 @@ def question4():
     answers["(c) Circle (b)"] = 0
 
     # type: int
-    answers["(c) Circle (c)"] = 0
+    answers["(c) Circle (c)"] = 2
 
     # type: explanatory string (at least four words)
-    answers["(c) explain"] = ""
+    answers["(c) explain"] = "Since circles A and B are situated closely to each other and a considerable distance from circle C, the points from A and B will cluster around the centroid in A. Meanwhile, the points within C will be equally distributed between two centroids, with each holding 50,000 points. Given that A and B each contain an equal number of points, the centroid in A will oscillate between them. Although the centroids within C will drift slightly apart, they will remain within C, each encompassing half of C's points."
 
     return answers
 
@@ -156,16 +157,17 @@ def question5():
     answers = {}
 
     # type: set
-    answers["(a)"] = set()
+    answers["(a)"] = {'Group B', 'Group A'}
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] = "Groups A and B are close enough to join because the farthest point on the right of A and the nearest point on the left of B are the closest to each other."
 
     # type: set
-    answers["(b)"] = set()
+    answers["(b)"] = {'Group C', 'Group A'}
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
+    answers["(b) explain"] = "
+Groups A and C will be combined because the distance between A's farthest right point and C's farthest point is the shortest when compared to the distances between A's leftmost point and B's rightmost point, and between B's rightmost point and C's farthest point."
 
     return answers
 
