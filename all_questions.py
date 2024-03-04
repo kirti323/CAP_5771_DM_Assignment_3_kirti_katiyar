@@ -179,19 +179,19 @@ def question6():
     answers = {}
 
     # type: set
-    answers["(a) core"] = set()
+    answers["(a) core"] = {'B', 'C', 'E', 'F', 'I', 'J', 'L', 'M'}
 
     # type: set
-    answers["(a) boundary"] = set()
+    answers["(a) boundary"] = {'D', 'G'}
 
     # type: set
-    answers["(a) noise"] = set()
+    answers["(a) noise"] = {'A', 'H'}
 
     # type: set
-    answers["(b) cluster 1"] = set()
+    answers["(b) cluster 1"] = {'B','C','D','E','F','G'}
 
     # type: set
-    answers["(b) cluster 2"] = set()
+    answers["(b) cluster 2"] = {'I','J','L','M'}
 
     # type: set
     answers["(b) cluster 3"] = set()
@@ -200,19 +200,19 @@ def question6():
     answers["(b) cluster 4"] = set()
 
     # type: set
-    answers["(c)-a core"] = set()
+    answers["(c)-a core"] = {'I', 'G', 'J', 'E', 'M', 'B', 'L', 'F', 'D', 'C'}
 
     # type: set
-    answers["(c)-a boundary"] = set()
+    answers["(c)-a boundary"] = {'A', 'H'}
 
     # type: set
     answers["(c)-a noise"] = set()
 
     # type: set
-    answers["(c)-b cluster 1"] = set()
+    answers["(c)-b cluster 1"] = {'G', 'I', 'H', 'J', 'E', 'M', 'B', 'D', 'F', 'L', 'C'}
 
     # type: set
-    answers["(c)-b cluster 2"] = set()
+    answers["(c)-b cluster 2"] = {'A'}
 
     # type: set
     answers["(c)-b cluster 3"] = set()
@@ -230,78 +230,79 @@ def question7():
     answers = {}
 
     # type: string
-    answers["(a)"] = ""
+    answers["(a)"] = "Cluster 4"
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] = "Cluster 4 shows the highest entropy because its categories are more evenly spread out."
 
     # type: string
-    answers["(b)"] = ""
+    answers["(b)"] = "Cluster 1"
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
+    answers["(b) explain"] = "Cluster 1 displays low entropy because its data is mostly concentrated in one category, resulting in high uniformity."
 
     return answers
 
-
-
+    
 
 # -----------------------------------------------------------
 def question8():
     answers = {}
 
     # type: string
-    answers["(a) Matrix 1"] = ""
+    answers["(a) Matrix 1"] = "Dataset Z"
 
     # type: explanatory string (at least four words)
-    answers["(a) explain diag entries, Matrix 1"] = ""
+    answers["(a) explain diag entries, Matrix 1"] = "Two diagonal entries appear bluer and clearer, suggesting that clusters B and C are more tightly knit compared to clusters A and D."
+    
+    # type: explanatory string (at least four words)
+    answers["(a) explain non-diag entries, Matrix 1"] = "Rows 1 and 3 represent clusters A and C, showing different distances to other clusters with changing colors: A is closest to C (blue), nearer to B (green), and farthest from D (yellow), and the same pattern applies to C. Row 2 matches B, with equal distances to A and C (green) and the farthest from D (red). Row 4 matches D, equally distant from A and C (yellow) and farthest from B (red)."
+   
+    # type: string
+    answers["(a) Matrix 2"] = "Dataset X"
 
     # type: explanatory string (at least four words)
-    answers["(a) explain non-diag entries, Matrix 1"] = ""
+    answers["(a) explain diag entries, Matrix 2"] = "Two diagonal entries are bluer and sharper, showing that clusters B and C are tighter than A and D."
+    
+    # type: explanatory string (at least four words)
+    answers["(a) explain non-diag entries, Matrix 2"] = "1.Rows 1 and 4, which are less clear, show varying colors for different clusters, meaning each cluster is at a distinct distance from them (for example, Cluster A is closest to B, then C, and farthest from D, with no two clusters at the same distance from A). 2.Rows with clearer diagonal entries have two identical colors (besides the diagonal), indicating equal distances to two clusters and being farthest from another (for example, B is equally distant from A and C, but farthest from D)."
+    
+    # type: string
+    answers["(a) Matrix 3"] = "Dataset Y"
+
+    # type: explanatory string (at least four words)
+    answers["(a) explain diag entries, Matrix 3"] = "Two diagonal entries are bluer and clearer, showing that clusters B and C are more closely knit than A and D."
+    
+    # type: explanatory string (at least four words)
+    answers["(a) explain non-diag entries, Matrix 3"] = "Each row has two matching and one unique color off the diagonal, showing every cluster is closer to two clusters than to the last one (for example, B is equally near to A and C but farther from D)."
+    
+    # type: string
+    answers["(b) Row 1"] = "Cluster A"
 
     # type: string
-    answers["(a) Matrix 2"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(a) explain diag entries, Matrix 2"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(a) explain non-diag entries, Matrix 2"] = ""
+    answers["(b) Row 2"] = "Cluster B"
 
     # type: string
-    answers["(a) Matrix 3"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(a) explain diag entries, Matrix 3"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(a) explain non-diag entries, Matrix 3"] = ""
+    answers["(b) Row 3"] = "Cluster C"
 
     # type: string
-    answers["(b) Row 1"] = ""
-
-    # type: string
-    answers["(b) Row 2"] = ""
-
-    # type: string
-    answers["(b) Row 3"] = ""
-
-    # type: string
-    answers["(b) Row 4"] = ""
+    answers["(b) Row 4"] = "Cluster D"
 
     # type: explanatory string (at least four words)
-    answers["(b) Row 1 explain"] = ""
+    answers["(b) Row 1 explain"] = "Less clear diagonal means the cluster isn't very tight. Different colors off-diagonal show varying distances to others (nearest to B, then C, farthest from A)."
+   
+    # type: explanatory string (at least four words)
+    answers["(b) Row 2 explain"] = "Sharper diagonal suggests a tight cluster. Two off-diagonals are the same color, showing closeness to two clusters (A and C, even if A's distance looks fuzzier), and farthest from one cluster (D)."
+    
+    # type: explanatory string (at least four words)
+    answers["(b) Row 3 explain"] = "Sharper diagonal suggests a tight cluster. Two off-diagonals are the same color, showing closeness to two clusters (A and C, even if A's distance looks fuzzier), and farthest from one cluster (D)."
 
     # type: explanatory string (at least four words)
-    answers["(b) Row 2 explain"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(b) Row 3 explain"] = ""
-
-    # type: explanatory string (at least four words)
-    answers["(b) Row 4 explain"] = ""
-
+    answers["(b) Row 4 explain"] = "Different colors off-diagonal indicate distances to others vary (closest to A, next is C, and most distant from B). A less clear diagonal suggests the cluster is not tightly knit, reversing the original order."
     return answers
+
+
+
 
 
 
@@ -311,24 +312,25 @@ def question9():
     answers = {}
 
     # type: list
-    answers["(a)"] = []
+    answers["(a)"] = ['Hierarchical', 'Partial', 'Overlapping']
 
     # type: list
-    answers["(b)"] = []
+    answers["(b)"] = ['Partitional', 'Exclusive', 'Complete']
 
     # type: list
-    answers["(c)"] = []
+    answers["(c)"] = ['Partitional', 'fuzzy', 'complete']
+
 
     # type: list
-    answers["(d)"] = []
+    answers["(d)"] = ['Hierarchical', 'overlapping', 'partial']
 
     # type: list
-    answers["(e)"] = []
+    answers["(e)"] = ['Partitional', 'Exclusive', 'Complete']
 
     # type: explanatory string (at least four words)
-    answers["(e) explain"] = ""
-
+    answers["(e) explain"] = "Letter grades are unique and do not mix, meaning a student gets just one grade for each class, and every student in the class gets a grade."
     return answers
+
 
 
 
@@ -338,26 +340,25 @@ def question10():
     answers = {}
 
     # type: string
-    answers["(a) Figure (a)"] = ""
+    answers["(a) Figure (a)"] = "No"
 
     # type: string
-    answers["(a) Figure (b)"] = ""
+    answers["(a) Figure (b)"] = "Yes"
 
     # type: explanatory string (at least four words)
-    answers["(a) explain"] = ""
+    answers["(a) explain"] = "DBSCAN is suitable for (b) as the points representing the nose, eyes, and mouth are closer to each other compared to the spaces between them, allowing DBSCAN to identify these features. In contrast, for (a), the high density of noise compared to the key features means DBSCAN would likely remove the nose, eyes, and mouth areas."
+    
+    # type: string
+    answers["(b) Figure (a)"] = "No"
 
     # type: string
-    answers["(b) Figure (a)"] = ""
-
-    # type: string
-    answers["(b) Figure (b)"] = ""
+    answers["(b) Figure (b)"] = "Yes"
 
     # type: explanatory string (at least four words)
-    answers["(b) explain"] = ""
-
+    answers["(b) explain"] = "K-means can be effective for (b) if it's configured with four clusters, though it will also group points of lower density. However, K-means is not suitable for (a)."
+    
     # type: string
-    answers["(c)"] = ""
-
+    answers["(c)"] = "Use the inverse of density as the new density value and apply DBSCAN using this adjusted metric."
     return answers
 
 # --------------------------------------------------------
